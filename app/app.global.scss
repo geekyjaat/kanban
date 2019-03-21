@@ -1,0 +1,36 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "./styles/Home.scss";
+@import "./styles/Counter.scss";
+
+:root {
+  /* primary layout colors */
+  --primary-color: #004454;
+  --secondary-color: #01647b;
+  --tert-color: #62858e;
+  --last-color: #526d73;
+  /* primary text color */
+  --primary-text-color: #fff;
+  --secondary-text-color: #f8f9fad9;
+  /* primary element colors for buttons, text */
+  --primary-elem-color: rgb(46, 170, 46);
+  --secondary-elem-color: rgb(247, 113, 113);
+  --tert-elem-color: #381c6dba;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  background-color: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
+}
+
+#root {
+  width: 100%;
+}

@@ -1,0 +1,149 @@
+.container-fluid {
+  padding: 0px !important;
+}
+
+.bg-primary-color {
+  background-color: var(--primary-color);
+}
+
+.btn-outline-primary {
+  color: var(--primary-text-color) !important;
+  border-color: var(--primary-text-color) !important;
+
+  &:hover {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+  }
+}
+
+.row {
+  margin: 0px !important;
+}
+
+.col-nopadding {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  overflow-y: scroll;
+
+  .card .card-body {
+    text-align: left;
+    padding: 5px;
+  }
+}
+
+.fill-height {
+  min-height: 100%;
+  height: auto !important;
+  /* cross-browser */
+  height: 100%;
+  /* cross-browser */
+  overflow-y: hidden;
+  /* don't show content that exceeds my height */
+}
+
+.vh100-height {
+  height: 100vh;
+
+  h3 {
+    border-bottom: 2px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-text-color);
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    font-weight: 250;
+  }
+}
+
+.border-2px-solid {
+  border-left: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  border-right: 2px solid var(--secondary-color);
+}
+
+.card {
+  margin: 1px 2px;
+
+  .card-title {
+    color: var(--primary-text-color);
+    font-weight: 400;
+    font-size: 1.15rem;
+    margin-bottom: .25rem;
+    transition: all .5s;
+  }
+
+  .card-title-small {
+    color: var(--primary-text-color);
+    font-weight: bold;
+    font-size: .75rem;
+    margin-bottom: .25rem;
+    transition: all .5s;
+  }
+}
+
+/* Main item card colors */
+.story-card {
+  background-color: var(--primary-elem-color) !important;
+}
+
+.defect-card {
+  background-color: var(--secondary-elem-color) !important;
+}
+
+.task-card {
+  background-color: var(--tert-elem-color) !important;
+}
+
+.title-underline {
+  margin-top: 0;
+  margin-bottom: .75rem;
+}
+
+.d-hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.d-show {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card .card-text {
+  color: var(--primary-text-color);
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
