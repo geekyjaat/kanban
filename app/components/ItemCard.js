@@ -16,13 +16,6 @@ class ItemCard extends React.Component {
 		}));
   };
 
-  onDragStart = (event) => {
-    // console.log('start - ', event);
-    // add the id to data transfer event
-    event.dataTransfer.setData('text/plain', event.target.id);
-    event.dropEffect = "move";
-  }
-
 	render() {
 		let color = 'story-card';
 		if (this.props.item.type === 'DEFECT') {
