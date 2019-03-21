@@ -1,8 +1,7 @@
 import React from 'react';
-import type { Item } from '../utils/Database';
 
 class ItemCard extends React.Component {
-	constructor(props: Object) {
+	constructor(props) {
 		super(props);
 		this.state = {
 			showDescription: false
@@ -15,6 +14,13 @@ class ItemCard extends React.Component {
 			showDescription: !prevState.showDescription
 		}));
   };
+
+  onDragStart = (event) => {
+    // console.log('start - ', event);
+    // add the id to data transfer event
+    event.dataTransfer.setData('text/plain', event.target.id);
+    event.dropEffect = "move";
+  }
 
 	render() {
 		let color = 'story-card';
@@ -38,7 +44,7 @@ class ItemCard extends React.Component {
 				</div>
 			</div>
 		);
-	}
+  }
 }
 
 export default ItemCard;

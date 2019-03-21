@@ -13,9 +13,7 @@ type Props = {
 	planning: Item[],
 	progress: Item[],
   done: Item[],
-  list: () => void,
-  add: (item:Item) => void,
-  update: (id:number, state: string) => void,
+  update: (id: number, state: string) => void
 };
 
 export default class Home extends Component<Props> {
@@ -25,14 +23,8 @@ export default class Home extends Component<Props> {
 		e.preventDefault();
 		// console.log('drop - ', targetId, e.target);
     const data = parseInt(e.dataTransfer.getData('text/plain'));
-    this.props.update(data, targetId);
-	};
-
-	onDragStart = (event: DragEvent) => {
-		// console.log('start - ', event);
-		// add the id to data transfer event
-		event.dataTransfer.setData('text/plain', event.target.id);
-		event.dropEffect = 'move';
+    const { update } = this.props;
+    update(data, targetId);
 	};
 
 	onDragOver = (e: DragEvent) => {
@@ -46,38 +38,19 @@ export default class Home extends Component<Props> {
 
 		const backlogDivs =
 			backlog && backlog.length > 0 ? (
-				backlog.map((item) => {
-					return <ItemCard item={item} key={item.id} />;
-				})
-			) : (
-				<div />
-			);
+				backlog.map((item) => <ItemCard item={item} key={item.id} />)) : (<div />);
 
 		const planningDivs =
 			planning && planning.length > 0 ? (
-				planning.map((item) => {
-					return <ItemCard item={item} key={item.id} />;
-				})
-			) : (
-				<div />
-			);
+				planning.map((item) => <ItemCard item={item} key={item.id} />)) : (<div />);
 
 		const progressDivs =
 			progress && progress.length > 0 ? (
-				progress.map((item) => {
-					return <ItemCard item={item} key={item.id} />;
-				})
-			) : (
-				<div />
-			);
+        progress.map((item) =>  <ItemCard item={item} key={item.id} />)) : (<div />);
+
 		const doneDivs =
     done && done.length > 0 ? (
-      done.map((item) => {
-					return <ItemCard item={item} key={item.id} />;
-				})
-			) : (
-				<div />
-			);
+      done.map((item) => <ItemCard item={item} key={item.id} />	)) : (<div />);
 		return (
 			<div className="container-fluid fill-height">
 				<Nav />
